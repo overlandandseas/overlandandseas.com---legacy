@@ -203,7 +203,7 @@ var projects = exports.projects = [{
 }];
 
 var writings = exports.writings = [{
-  title: 'Es6 Modlues in browser',
+  title: 'Es6 Modules in browser',
   description: 'Gist explaining how to use es6 modules in the browser',
   link: 'https://gist.github.com/overlandandseas/ad0ac1496865e6f6c390f7928be900c0',
   date: new Date('12/29/2017')
