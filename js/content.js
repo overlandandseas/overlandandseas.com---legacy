@@ -20,7 +20,7 @@ export const projects = [
   {
     title: 'is-really-empty',
     link: 'https://github.com/overlandandseas/is-really-empty',
-    description: 'Micro-library to tell if objects or varaibles are empty in JS',
+    description: 'Micro-library to tell if objects or variables are empty in JS',
     date: new Date('5/9/2018')
   },
   {
