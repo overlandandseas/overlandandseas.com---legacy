@@ -9,7 +9,7 @@
   "author": "",
   "license": "WTFPL",
   "devDependencies": {
-    "cssnano": "^4.1.0",
+    "cssnano": "^4.1.10",
     "tachyons": "^4.11.1"
   }
 }

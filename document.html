@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <link rel="stylesheet" href="css/stylesheet.css">
+  <link rel="stylesheet" href="node_modules\tachyons\css\tachyons.min.css">
+  <script src="js/custom.js" defer charset="utf-8"></script>
+  <link rel="stylesheet"
+      href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/styles/ocean.min.css">
+<script src="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.15.6/highlight.min.js" defer></script>
+</head>
+
+<body class="lato bg-brownish">
+  <div class="min-vh-100">
+    <nav class="db dt-l w-100 border-box pa3 ph5-l fixed top-0 bg-yellowish">
+      <div class="db dtc-l v-mid w-100 w-75-l">
+        <a href='/' class="link dim near-black ttl tracked f6 f5-l dib mr3 mr4-l">Archive</a>
+        <a href='./about/' class="link dim near-black ttl tracked f6 f5-l dib mr3 mr4-l">Tags</a>
+        <a href='./about/' class="link dim near-black ttl tracked f6 f5-l dib mr3 mr4-l">About</a>
+      </div>
+    </nav>
+    <section class="center pt6-ns pt5 pl5">
+      <!-- <a href='/' class="f1 fw3 black link">Ø</a> -->
+      <header>
+        <h1 class="mt2 mb0 fw3 athelas tracked f3 ttl">Øverlandandseas</h1>
+        <h2 class="mt2 mb0 f6 fw3 ttu tracked black-60">Projects & Writings about programming and music</h2>
+        <h3 class="mt2 mb0 f6 fw4 tracked athelas black-80">Chicago / SF</h3>
+      </header>
+    </section>
+
+    <!-- <section class="pa5 center" >
+      <h3 class="fw3 ttu tracked black-60">Writings / Tutorials</h3>
+      <div id="tuts"></div>
+      <h3 class="fw3 ttu tracked black-60">Projects</h3>
+      <div id="projects" ></div>
+    </section> -->
+
+    <article class="pa5 mt4 bg-white-70 bt b--black-20 lh-copy">
+      <div class="mw7 center">
+        <h1 class="black-70">is-really-empty 🌌</h1>
+        <p class="black-50 ma0 f6"><strong>Publish date: </strong>2019-03-11</p>
+        <p class="black-50 ma0 f6">
+          <strong>Tags: </strong>
+          <a class="link underlind black-40 dim" href="https://themes.gohugo.io/theme/cayman-hugo-theme/tags/markdown/">markdown</a>, <a class="link underlind black-40 dim" href="https://themes.gohugo.io/theme/cayman-hugo-theme/tags/css/">css</a>, <a class="link underlind black-40 dim" href="https://themes.gohugo.io/theme/cayman-hugo-theme/tags/html/">html</a>, <a class="link underlind black-40 dim" href="https://themes.gohugo.io/theme/cayman-hugo-theme/tags/themes/">themes</a>
+        </p>
+        <p><a href="https://www.npmjs.com/package/is-really-empty"><img src="https://img.shields.io/npm/v/is-really-empty.svg" alt="npm"></a></p>
+        <p class="athelas">A Small library to tell if the passed value is <em>really</em> empty.</p>
+        <h2 class="black-70">Prerequisites</h2>
+        <p class="athelas">This library uses <code class="red bg-near-white">for in</code> and <code class="red bg-near-white">for of</code> so at least <strong>node 4.x</strong> is required.</p>
+        <h2 class="black-70">What “empty” means</h2>
+        <h5 class="black-70">Marriam-Webster definition of empty</h5>
+        <blockquote class="athelas ml0 mt0 pl4 black-90 bl bw2 b--dark-gray">
+          <p class="f4 lh-copy measure mt0">Lacking reality, substance, meaning, or value. Marked by the absence of human
+            life, activity, or comfort</p>
+          </blockquote>
+          <p class="athelas">A value proves to be “empty” when we can determine it contains nothing. An
+            object or array that has been instantiated (even with a length value being set)
+            if no fields have been populated, then it proves to be empty. WeakMaps and
+            WeakSets are never empty since there is no way to tell if they’ve ever been
+            filled. A function is empty when it accepts no parameters. False, null,
+            undefined, and NaN are all empty as they are the absence of value and often
+            defaults for some cases.</p>
+            <h4 class="black-70">Iterables</h4>
+            <p class="athelas">Since the way it tells if an iterable is empty is by traversing it, this
+              will call a getter or a yield (in a generator function) if they exist as the
+              first property.</p>
+              <h2 class="black-70">Usage</h2>
+              <p class="athelas">A more comprehensive list is on the <a href="https://overlandandseas.github.io/is-really-empty/">project website</a>.</p>
+              <pre class="hljs language-js br2 ba b--gray"><code><span class="hljs-keyword">const</span> isEmpty = <span class="hljs-built_in">require</span>(<span class="hljs-string">"is-really-empty"</span>);
+
+                isEmpty(<span class="hljs-literal">undefined</span>); <span class="hljs-comment">// true</span>
+                isEmpty(<span class="hljs-number">1</span>); <span class="hljs-comment">// false</span>
+                isEmpty(<span class="hljs-literal">NaN</span>); <span class="hljs-comment">// true</span>
+                isEmpty(<span class="hljs-string">""</span>); <span class="hljs-comment">// true</span>
+                isEmpty(<span class="hljs-string">"1"</span>); <span class="hljs-comment">// false</span>
+                isEmpty([]); <span class="hljs-comment">// true</span>
+                isEmpty([<span class="hljs-number">1</span>]); <span class="hljs-comment">// false</span>
+                isEmpty(<span class="hljs-keyword">new</span> <span class="hljs-built_in">Array</span>(<span class="hljs-number">2</span>)) <span class="hljs-comment">// true</span>
+                isEmpty()()()()(<span class="hljs-string">"string"</span>); <span class="hljs-comment">// false</span>
+              </code></pre>
+              <h2 class="black-70">Testing</h2>
+              <pre class="hljs br2 ba b--gray"><code>$ npm test
+              </code></pre>
+              <h2 class="black-70">License</h2>
+              <p class="athelas">WTFPL</p>
+      </div>
+    </article>
+  </div>
+  </html>

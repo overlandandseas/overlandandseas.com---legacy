@@ -10,7 +10,7 @@ const listOfProjects = projects
       ded([
         'li pa2 black-40',
         [
-          'a b black-50 link hover-light-red code underline',
+          'a b black-50 link hover-light-red underline',
           { href: item.link },
           item.title
         ],
@@ -38,11 +38,11 @@ const listOfWritings = writings
         ded([
           'li pa2 black-40',
           [
-            'a b black-50 link hover-dark-blue code underline',
+            'a b black-50 link hover-dark-blue underline',
             { href: item.link },
             item.title
           ],
-          `: ${item.description}`,
+          // `: ${item.description}`,
           [
             'p pa0 ma0 f6 i',
             item.date.toLocaleDateString('en-US', {
